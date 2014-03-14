@@ -3,30 +3,26 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_username(params[:user][:username])
+    user = User.find_by_credentials(user_params)
 
-    if user && user.verify_password(params[:user][:password])
-      user.reset_session_token!
-      session[:session_token] = user.session_token
-
+    if user
+      login!(user)
+      flash[:success] = ["Welcome back, #{user.username}!"]
       redirect_to root_url
     else
-      render :json => "Invalid login."
+      flash.now[:errors] = ["Invalid Username/Password"]
+      render :new
     end
   end
 
   def destroy
-    user = current_user
-
-    if user.nil?
-      redirect_to new_session_url
-      return
-    end
-
-    session[:session_token] = nil
-    user.session_token = nil
-    user.save!
-
+    logged_in? && logout!
     redirect_to new_session_url
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:username, :password)
   end
 end

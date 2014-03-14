@@ -16,10 +16,17 @@
 
 body {
   margin: 0;
+  margin-top: 5em;
   box-sizing: border-box;
   padding: 8px;
   background-color: #daf1fb !important;
 }
+
+.container-fluid {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
 
 span.title {
   font-weight: 700;
@@ -88,16 +95,4 @@ li {
 
 input[type="text"] {
   width: inherit;
-}
-
-button, input[type="submit"] {
-  font-weight: 800;
-  background: transparent;
-  border: 1px dotted;
-  border-radius: 8px;
-}
-
-button:hover, input[type="submit"]:hover {
-  background-color: transparent;
-  color: blue;
 }

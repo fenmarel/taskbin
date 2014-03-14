@@ -8,12 +8,12 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      @user.reset_session_token!
-      session[:session_token] = @user.session_token
-
+      login!(@user)
+      flash[:success] = ["Welcome to Tasko, #{@user.username}!"]
       redirect_to root_url
     else
-      render json: { errors: @user.errors.full_messages }
+      flash.now[:errors] = @user.errors.full_messages
+      render :new
     end
   end
 

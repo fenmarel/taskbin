@@ -7,16 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar-inner">
-      <ul class="nav">
-        <li>
-          <span class="title">Tasko</span>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <%= yield %>
+  <%= render 'layouts/header' %>
+
+  <div class="container">
+    <%= render 'layouts/flash' %>
+    <%= yield %>
+  </div>
 
 <div class="overlay hidden">
 </div>
