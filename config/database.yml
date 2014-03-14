@@ -1,0 +1,8 @@
+
+development:
+  adapter: postgresql
+  database: tasko_development
+  host: localhost
+  username: postgres
+  pool: 5
+  timeout: 5000

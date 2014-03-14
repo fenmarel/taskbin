@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import 'bootstrap';
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 8px;
+  background-color: #daf1fb !important;
+}
+
+span.title {
+  font-weight: 700;
+  font-size: 28px;
+  position: relative;
+  top: 7px;
+  font-style: italic;
+}
+
+input#logout, input#logout{
+  background-color: white;
+}
+
+div#content {
+  margin:0px auto;
+  width: auto;
+
+  padding: 10px;
+  margin-bottom: 10px;
+
+  overflow-x: scroll;
+}
+
+.white_area {
+  overflow: scroll;
+  background-color: white;
+  border: 1px dotted black;
+  border-radius: 4px;
+  moz-border-radius: 4px;
+  padding: 30px;
+}
+
+div.board_members {
+  margin-left: 22px;
+}
+
+button.newList {
+  margin: 10px 0;
+}
+
+button#deleteBoard {
+  margin: 10px 22px;
+}
+
+a {
+  text-decoration: none !important;
+  font-weight: 600;
+}
+
+ul {
+  list-style-type: none !important;
+  padding-left: 0;
+  margin: 0;
+}
+
+
+li {
+  padding-top: 2px;
+  padding-left: 0;
+}
+
+
+.hidden {
+  display: none;
+}
+
+input[type="text"] {
+  width: inherit;
+}
+
+button, input[type="submit"] {
+  font-weight: 800;
+  background: transparent;
+  border: 1px dotted;
+  border-radius: 8px;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: transparent;
+  color: blue;
+}
