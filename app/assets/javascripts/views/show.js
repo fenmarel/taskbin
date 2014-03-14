@@ -1,4 +1,4 @@
-Tasko.Views.BoardsShow = Backbone.View.extend({
+Tasko.Views.BoardsShow = Backbone.CompositeView.extend({
   template: JST['boards/show'],
 
   render: function() {
