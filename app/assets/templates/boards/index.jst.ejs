@@ -1,5 +1,7 @@
+<h4><span class="glyphicon glyphicon-user"></span> My Boards</h4>
+
 <% boards.each(function(board) { %>
-  <a href="#/boards/<%= board.id %>" class="btn btn-primary">
+  <a href="#/boards/<%= board.id %>" class="btn btn-primary board-object">
     <%= board.escape('title') %>
   </a>
 <% }); %>
