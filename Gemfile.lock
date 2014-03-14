@@ -181,6 +181,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   debugger
+  ejs
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails

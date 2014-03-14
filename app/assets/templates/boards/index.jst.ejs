@@ -1,0 +1,5 @@
+<% boards.each(function(board) { %>
+  <a href="#/boards/<%= board.id %>" class="btn btn-primary">
+    <%= board.escape('title') %>
+  </a>
+<% }); %>

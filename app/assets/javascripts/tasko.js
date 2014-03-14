@@ -4,7 +4,13 @@ window.Tasko = {
   Views: {},
   Routers: {},
   initialize: function() {
-
+    Tasko.boards = new Tasko.Collections.Boards();
+    Tasko.boards.fetch({
+      success: function() {
+        new Tasko.Routers.TaskoRouter();
+        Backbone.history.start();
+      }
+    });
   }
 };
 

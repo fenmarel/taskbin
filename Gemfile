@@ -6,6 +6,7 @@ gem 'underscore-rails'
 gem 'backbone-on-rails'
 gem 'backbone-relational-rails'
 gem 'pry-rails'
+gem 'ejs'
 
 # Use sqlite3 as the database for Active Record
 gem 'pg'
