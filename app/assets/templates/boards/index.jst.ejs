@@ -3,3 +3,11 @@
     <%= board.escape('title') %>
   </a>
 <% }); %>
+<hr>
+<form class="form-inline" role="form" id="new-board">
+  <div class="form-group">
+    <input type="text" name="board[title]" placeholder="New Board Title"
+           class="form-control">
+  </div>
+  <input type="submit" value="&#43; New Board" class="btn btn-default">
+</form>

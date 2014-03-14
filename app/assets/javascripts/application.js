@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
+//= require jquery.serializeJSON
 //= require underscore
 //= require backbone
 //= require backbone-relational
