@@ -15,7 +15,6 @@ Tasko.Views.BoardsShow = Backbone.CompositeView.extend({
   render: function() {
     $('body').css("background-color", "#23719F");
     this.$el.html(this.template({ board: this.model }));
-
     this.renderSubviews();
     return this;
   },

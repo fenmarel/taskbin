@@ -21,10 +21,16 @@ li.list_entry, li.board_entry {
 .board-object {
   text-align: left;
   margin: 0.5em;
-  width: 21%;
-  min-width: 10em;
+  font-weight: bold;
+  font-size: 1.1em;
+  width: 23%;
+  min-width: 11em;
   height: 7em;
   background: #23719F;
+}
+
+#board-title {
+  color: #fff;
 }
 
 button.newBoard {
