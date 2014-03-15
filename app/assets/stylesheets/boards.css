@@ -24,6 +24,7 @@ li.list_entry, li.board_entry {
   width: 21%;
   min-width: 10em;
   height: 7em;
+  background: #23719F;
 }
 
 button.newBoard {

@@ -1,4 +1,4 @@
-Tasko.Views.BoardIndex = Backbone.View.extend({
+Tasko.Views.BoardsIndex = Backbone.View.extend({
   initialize: function() {
     this.listenTo(this.collection, "add", this.render);
   },
@@ -10,6 +10,7 @@ Tasko.Views.BoardIndex = Backbone.View.extend({
   },
 
   render: function() {
+    $('body').css("background-color", "#FFFFFF");
     this.$el.html(this.template({ boards: this.collection }));
     return this;
   },

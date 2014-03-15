@@ -14,6 +14,7 @@
 
 @import 'bootstrap';
 
+
 body {
   margin: 0;
   margin-top: 5em;
@@ -92,4 +93,9 @@ li {
 
 input[type="text"] {
   width: inherit;
+}
+
+.list-object {
+  @extend .btn;
+  @extend .btn-default;
 }

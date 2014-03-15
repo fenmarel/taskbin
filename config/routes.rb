@@ -1,7 +1,7 @@
 Tasko::Application.routes.draw do
   root to: 'boards#index'
   resources :boards, only: [:index, :show, :create, :update, :destroy] do
-    resources :lists, only: [:index, :show, :create, :update, :destroy]
+    resources :lists, :shallow => true
   end
   resources :cards, only: [:create, :update, :destroy] do
       resources :todo_items, only: [:create, :update, :destroy]

@@ -5,7 +5,7 @@ Tasko.Routers.TaskoRouter = Backbone.Router.extend({
   },
 
   boardIndex: function() {
-    this._swapView(new Tasko.Views.BoardIndex({
+    this._swapView(new Tasko.Views.BoardsIndex({
       collection: Tasko.boards
     }));
   },
