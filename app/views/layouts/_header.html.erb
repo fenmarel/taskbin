@@ -8,15 +8,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand nav-link" href="#">Tasko</a>
+
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <% if logged_in? %>
         <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Boards <b class="caret"></b></a>
+          <div class="dropdown">
+            <a href="#" id="dropdown" data-toggle="dropdown"
+              class="dropdown-toggle btn btn-primary navbar-btn">
+              <span class="glyphicon glyphicon-tasks"></span>  Boards <b class="caret"></b>
+            </a>
             <ul class="dropdown-menu" id="boards-dropdown">
               <% current_user.boards.each do |board| %>
                 <li>
@@ -26,21 +29,29 @@
               <li class="divider" id="new-board-divider"></li>
               <li><a href="#" id="new-board-dropdown-link">+ New Board</a></li>
             </ul>
-          </li>
+          </div>
         </ul>
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
+            <input id="board-search-text" type="text" class="form-control">
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button id="search-icon" type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
         </form>
       <% end %>
 
+      <a class="navbar-brand nav-link" id="brand" href="#">
+        <span class="glyphicon glyphicon-tasks"></span> Tasko
+      </a>
+
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
-          <li class="navbar-text"><%= current_user.username %></li>
-          <li><%= button_to "Log Out", session_url, :method => :delete,
-             :class => "btn btn-danger navbar-btn" %></li>
+          <li class="navbar-text" id="username">
+            <%= current_user.username %>
+          </li>
+          <li><%= button_to "X", session_url, :method => :delete,
+             :class => "btn btn-danger navbar-btn logout-btn" %></li>
         <% else %>
           <li><%= link_to "Sign Up", new_user_url %></li>
           <li><%= link_to "Log In", new_session_url %></li>

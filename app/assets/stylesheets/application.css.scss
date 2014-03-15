@@ -22,11 +22,60 @@ body {
   padding: 8px;
 }
 
+.navbar-default {
+  background: #1E638B;
+  border: none;
+}
+
 nav .container-fluid {
   margin-left: 2em;
   margin-right: 2em;
 }
 
+#brand {
+  color: #91B4C9;
+  margin-left: 15%;
+}
+
+#username {
+  color: #91B4C9;
+}
+
+.logout-btn {
+  background: #548AA9;
+  border: 1px solid #548AA9;
+}
+
+.btn-tasko {
+  @extend .btn-primary;
+  background: #1E638B;
+  border: 1px solid #1E638B;
+}
+
+#dropdown {
+  color: #fff;
+  background: #4F87A6;
+  border: 1px solid #548AA9;
+}
+
+#search-input {
+  border: none;
+  width: 20%;
+}
+
+#board-search-text {
+  background: #91B4C9;
+  border: none;
+}
+
+#search-icon {
+ background: #548AA9;
+ border: 1px solid #548AA9;
+}
+
+.glyphicon-search {
+  color: #fff;
+}
 
 span.title {
   font-weight: 700;

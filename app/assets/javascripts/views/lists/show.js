@@ -1,4 +1,4 @@
-Tasko.Views.ListsShow = Backbone.View.extend({
+Tasko.Views.ListsShow = Backbone.CompositeView.extend({
   template: JST['lists/show'],
 
   render: function() {
