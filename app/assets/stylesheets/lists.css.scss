@@ -4,8 +4,19 @@
   float: left;
   margin: 0.5em;
   width: 25%;
-  min-width: 12em;
+  min-width: 14em;
+  max-width: 20em;
   height: auto;
   min-height: 8em;
   background: #DBDBDB;
 }
+
+#new-list-submit {
+  margin-top: 0.8em;
+}
+
+#new-list-text {
+  margin-top: 0.6em;
+  width: 95%;
+}
+

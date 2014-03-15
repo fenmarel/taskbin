@@ -39,6 +39,12 @@ class ListsController < ApplicationController
 
   private
   def list_params
-    params.require(:list).permit(:title, :rank, :board_id)
+    board = Board.find(params[:board_id])
+    current_rank = board.lists.pluck(:rank).max
+    base = params.require(:list).permit(:title)
+
+    base[:rank] = current_rank ? current_rank + 1 : 1
+    base[:board_id] = board.id
+    base
   end
 end

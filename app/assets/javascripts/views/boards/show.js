@@ -1,13 +1,18 @@
 Tasko.Views.BoardsShow = Backbone.CompositeView.extend({
-  initialize: function() {
-    this.listenTo(this.model.lists(), "all", this.render);
+  initialize: function(options) {
+    this.lists = this.model.lists();
+    _.bindAll(this, "addList");
+    options.vent.bind("addList", this.addList);
+
+    this.listenTo(this.lists, "add", this.render);
+
     var that = this;
-    this.model.lists().fetch({
+    this.lists.fetch({
       success: function(data) {
         data.each(that.addList.bind(that));
+        that.addListForm(options.vent);
       }
     });
-
   },
 
   template: JST['boards/show'],
@@ -23,5 +28,15 @@ Tasko.Views.BoardsShow = Backbone.CompositeView.extend({
     var listShow = new Tasko.Views.ListsShow({ model: list });
     this.addSubview("#lists", listShow);
     listShow.render();
+  },
+
+  addListForm: function(vent) {
+    var listNew = new Tasko.Views.ListsNew({
+      collection: this.lists,
+      board: this.model,
+      vent: vent
+    });
+    this.addSubview("#list-form", listNew);
+    listNew.render();
   }
 });

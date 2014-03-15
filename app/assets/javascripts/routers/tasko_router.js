@@ -11,8 +11,11 @@ Tasko.Routers.TaskoRouter = Backbone.Router.extend({
   },
 
   boardShow: function(id) {
+    var vent = _.extend({}, Backbone.Events);
+
     this._swapView(new Tasko.Views.BoardsShow({
-      model: Tasko.boards.get(id)
+      model: Tasko.boards.get(id),
+      vent: vent
     }))
   },
 
