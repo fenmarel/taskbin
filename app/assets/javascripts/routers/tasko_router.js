@@ -1,7 +1,8 @@
 Tasko.Routers.TaskoRouter = Backbone.Router.extend({
   routes: {
     "": "boardIndex",
-    "boards/:id": "boardShow"
+    "boards/:id": "boardShow",
+    "cards/:id": "cardShow"
   },
 
   boardIndex: function() {
@@ -17,6 +18,11 @@ Tasko.Routers.TaskoRouter = Backbone.Router.extend({
       model: Tasko.boards.get(id),
       vent: vent
     }))
+  },
+
+  cardShow: function(id) {
+    var showView = new Tasko.Views.CardsShow();
+    $('#content').html(showView.render().$el);
   },
 
   _swapView: function(newView) {

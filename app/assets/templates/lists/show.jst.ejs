@@ -2,12 +2,13 @@
   <h4><%= list.escape('title') %></h4>
   <% cards.forEach(function(card) { %>
     <div class="tasko-card">
-      <a class="btn btn-tasko-card" href="#<%= card.url() %>">
+      <button class="btn btn-tasko-card card-show-modal"
+              data-id="<%= card.id %>" data-toggle="modal" data-target="#cardModal">
         <div><%= card.escape('title') %></div>
         <div class="card-progress">
           <span class="glyphicon glyphicon-th-list"></span> Progress
         </div>
-      </a>
+      </button>
     </div>
   <% }); %>
 

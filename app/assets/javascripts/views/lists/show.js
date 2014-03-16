@@ -17,7 +17,8 @@ Tasko.Views.ListsShow = Backbone.View.extend({
   events: {
     "click .add-card-toggle": "toggleCardForm",
     "click .new-card-untoggle": "untoggleCardForm",
-    "submit .new-card-form": "createCard"
+    "submit .new-card-form": "createCard",
+    "click .card-show-modal": "showModal"
   },
 
   render: function() {
@@ -65,6 +66,14 @@ Tasko.Views.ListsShow = Backbone.View.extend({
         that.cards.add(card);
       }
     });
+  },
+
+  showModal: function(event) {
+    event.preventDefault();
+    var card = this.cards.get($(event.currentTarget).data().id);
+
+    var form = JST['cards/show']({ card: card });
+    $('#modal').html(form);
   }
 });
 
