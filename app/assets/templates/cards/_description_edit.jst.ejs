@@ -1,0 +1,9 @@
+<form id="card-description-form" role="form">
+  <textarea name="card[description]" rows="8" class="card-description-text form-control"
+            autofocus><%= card.escape('description') %></textarea>
+
+  <p>
+    <input type="submit" value="Save" class="btn btn-success card-description-submit">
+    <span class="glyphicon glyphicon-remove description-untoggle"></span>
+  </p>
+</form>

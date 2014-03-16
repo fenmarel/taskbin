@@ -1,7 +1,7 @@
 class CardsController < ApplicationController
 
   def create
-    @card = Card.new(card_params)
+    @card = Card.new(new_card_params)
 
     if @card.save
       render json: @card
@@ -18,7 +18,7 @@ class CardsController < ApplicationController
 
   def update
     @card = Card.find(params[:id])
-    @card.update_attributes(card_params)
+    @card.update_attributes(update_card_params)
 
     if params[:newUserEmail]
       email = params[:newUserEmail]
@@ -41,10 +41,14 @@ class CardsController < ApplicationController
 
 
   private
-  def card_params
+  def new_card_params
     current_rank = Card.all.where(list_id: params[:card][:list_id]).pluck(:rank).max
     base = params.require(:card).permit(:title, :list_id)
     base[:rank] = current_rank ? current_rank + 1 : 1
     base
+  end
+
+  def update_card_params
+    params.require(:card).permit(:title, :description, :rank)
   end
 end

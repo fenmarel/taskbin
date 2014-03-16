@@ -43,6 +43,33 @@
   margin-left: 1.5em;
 }
 
+.card-description-text {
+  width: 100%;
+}
+
+.card-description-submit {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  margin-top: 8px;
+}
+
+.edit-description-toggle {
+  color: #A9A9A9;
+  font-size: 0.9em;
+
+  &:hover {
+    color: #686868;
+  }
+}
+
+.card-description {
+  margin-top: 8px;
+}
+
+.modal-content {
+  background: #F0F0F0;
+}
+
 .flexwidth {
   display: inline-block;
 }

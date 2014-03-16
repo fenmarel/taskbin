@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if user
       login!(user)
-      flash[:success] = ["Welcome back, #{user.username}!"]
+      # flash[:success] = ["Welcome back, #{user.username}!"]
       redirect_to root_url
     else
       flash.now[:errors] = ["Invalid Username/Password"]
