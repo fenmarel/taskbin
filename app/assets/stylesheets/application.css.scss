@@ -52,6 +52,18 @@ nav .container-fluid {
   border: 1px solid #1E638B;
 }
 
+.btn-tasko-card {
+  @extend .btn-default;
+  border: 1px solid #fff;
+  width: 100%;
+  text-align: left;
+
+  &:hover {
+    background-color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+  }
+}
+
 #dropdown {
   color: #fff;
   background: #4F87A6;
@@ -147,4 +159,8 @@ input[type="text"] {
 .list-object {
   @extend .btn;
   @extend .btn-default;
+
+  &:hover {
+    background-color: #DBDBDB;
+  }
 }

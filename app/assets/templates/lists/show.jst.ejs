@@ -1,3 +1,13 @@
 <div class="list-object">
-  <%= list.escape('title') %>
+  <h4><%= list.escape('title') %></h4>
+  <% cards.forEach(function(card) { %>
+    <div class="tasko-card">
+      <a class="btn btn-tasko-card" href="#<%= card.url() %>">
+        <div><%= card.escape('title') %></div>
+        <div class="card-progress">
+          <span class="glyphicon glyphicon-th-list"></span> Progress
+        </div>
+      </a>
+    </div>
+  <% }); %>
 </div>

@@ -4,7 +4,7 @@ Tasko::Application.routes.draw do
     resources :lists, :shallow => true, :except => [:new, :edit]
   end
 
-  resources :cards, only: [:create, :update, :destroy] do
+  resources :cards, only: [:create, :index, :update, :destroy] do
     resources :todo_items, :shallow => true, :except => [:new, :edit]
   end
 
