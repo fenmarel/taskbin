@@ -1,0 +1,10 @@
+<form class="new-card-form">
+  <textarea name="card[title]" rows="2" class="form-control" class="new-card-text"></textarea>
+
+  <input type="hidden" name="card[list_id]" value="<%= list.id %>">
+
+  <p>
+    <input type="submit" value="Add" class="btn btn-success new-card-submit">
+    <a href="#" class="glyphicon glyphicon-remove new-card-untoggle"></a>
+  </p>
+</form>

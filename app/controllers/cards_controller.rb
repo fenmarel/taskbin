@@ -42,6 +42,9 @@ class CardsController < ApplicationController
 
   private
   def card_params
-    params.require(:card).permit(:title, :description, :rank, :list_id)
+    current_rank = Card.all.where(list_id: params[:card][:list_id]).pluck(:rank).max
+    base = params.require(:card).permit(:title, :list_id)
+    base[:rank] = current_rank ? current_rank + 1 : 1
+    base
   end
 end

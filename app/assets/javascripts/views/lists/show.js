@@ -14,6 +14,12 @@ Tasko.Views.ListsShow = Backbone.View.extend({
 
   template: JST['lists/show'],
 
+  events: {
+    "click .add-card-toggle": "toggleCardForm",
+    "click .new-card-untoggle": "untoggleCardForm",
+    "submit .new-card-form": "createCard"
+  },
+
   render: function() {
     var content = this.template({
       list: this.model,
@@ -26,5 +32,44 @@ Tasko.Views.ListsShow = Backbone.View.extend({
 
   addCard: function(card) {
     this.cards.add(card);
+  },
+
+  toggleCardForm: function(event) {
+    event.preventDefault();
+    $('.new-card-form').hide();
+    $('.add-card-toggle').show();
+    var $target = $(event.target);
+    $target.hide();
+    var $parent = $target.parent();
+    var form = JST['cards/new']({ list: this.model });
+    $parent.append(form);
+  },
+
+  untoggleCardForm: function(event) {
+    event.preventDefault();
+
+    $(event.target).parents('form').hide()
+    $('.add-card-toggle').show();
+  },
+
+  createCard: function(event) {
+    event.preventDefault();
+    var data = $(event.target).serializeJSON();
+    var that = this;
+
+    $.ajax({
+      url: '/cards',
+      type: 'POST',
+      data: data,
+      success: function(card) {
+        that.cards.add(card);
+      }
+    });
   }
 });
+
+
+
+
+
+
