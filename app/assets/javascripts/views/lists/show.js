@@ -31,8 +31,9 @@ Tasko.Views.ListsShow = Backbone.View.extend({
 
     $('.list-object .tasko-card-list').sortable({
       handle: 'button',
-      connectWith: '.list-object',
+      connectWith: ['.tasko-card-list'],
       cancel: '',
+      dropOnEmpty: true,
       stop: this.reorderCards.bind(this)
     }).disableSelection();
 
@@ -98,7 +99,6 @@ Tasko.Views.ListsShow = Backbone.View.extend({
 
     var newRank = card.get('rank');
     if (nextRank !== undefined && prevRank !== undefined) {
-      console.log("first")
       newRank = (nextRank + prevRank) / 2.0;
     } else if (nextRank !== undefined) {
       newRank = nextRank - 10.0;
@@ -106,7 +106,13 @@ Tasko.Views.ListsShow = Backbone.View.extend({
       newRank = prevRank + 10.0;
     }
 
-    card.save({ rank: newRank });
+    var newListId = $(event.toElement).parents('ol').data('list_id');
+
+    if (newListId !== card.get('list_id')) {
+      card.save({ rank: newRank, list_id: newListId }, { patch: true });
+    } else {
+      card.save({ rank: newRank }, { patch: true });
+    }
   }
 });
 

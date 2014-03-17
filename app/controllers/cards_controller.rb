@@ -49,6 +49,6 @@ class CardsController < ApplicationController
   end
 
   def update_card_params
-    params.require(:card).permit(:title, :description, :rank)
+    params.require(:card).permit(:title, :description, :rank, :list_id)
   end
 end

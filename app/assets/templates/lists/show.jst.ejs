@@ -1,6 +1,6 @@
 <div class="list-object">
   <h4><%= list.escape('title') %></h4>
-  <ol class="tasko-card-list">
+  <ol class="tasko-card-list" data-list_id="<%= list.id %>">
     <% cards.forEach(function(card) { %>
       <li class="tasko-card"
           data-id="<%= card.id %>" data-rank="<%= card.get('rank') %>">
