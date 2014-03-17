@@ -12,6 +12,8 @@ Tasko.Views.ListsShow = Backbone.View.extend({
     });
   },
 
+  el: '<div class="list-object">',
+
   template: JST['lists/show'],
 
   events: {

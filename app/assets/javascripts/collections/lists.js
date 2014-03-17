@@ -7,5 +7,7 @@ Tasko.Collections.Lists = Backbone.Collection.extend({
     return this.board.url() + '/lists'
   },
 
-  model: Tasko.Models.List
+  model: Tasko.Models.List,
+
+  comparator: "rank"
 });

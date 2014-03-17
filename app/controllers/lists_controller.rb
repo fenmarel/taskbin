@@ -11,7 +11,7 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new(list_params)
+    @list = List.new(new_list_params)
 
     if @list.save
       render json: @list
@@ -22,7 +22,7 @@ class ListsController < ApplicationController
 
   def update
     @list = List.find(params[:id])
-    @list.update_attributes(list_params)
+    @list.update_attributes(update_list_params)
 
     if @list.save
       render json: @list
@@ -38,7 +38,7 @@ class ListsController < ApplicationController
   end
 
   private
-  def list_params
+  def new_list_params
     board = Board.find(params[:board_id])
     current_rank = board.lists.pluck(:rank).max
     base = params.require(:list).permit(:title)
@@ -46,5 +46,9 @@ class ListsController < ApplicationController
     base[:rank] = current_rank ? current_rank + 1 : 1
     base[:board_id] = board.id
     base
+  end
+
+  def update_list_params
+    params.require(:list).permit(:title, :rank)
   end
 end

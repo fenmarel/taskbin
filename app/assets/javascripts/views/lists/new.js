@@ -4,6 +4,8 @@ Tasko.Views.ListsNew = Backbone.CompositeView.extend({
     this.vent = options.vent;
   },
 
+  el: '<div class="list-object">',
+
   template: JST['lists/new'],
 
   events: {
