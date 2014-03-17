@@ -1,6 +1,7 @@
 Tasko.Views.BoardsIndex = Backbone.View.extend({
   initialize: function() {
     this.listenTo(this.collection, "add", this.render);
+    $(window).on('resize', this.resizeWindow);
   },
 
   template: JST['boards/index'],
@@ -14,6 +15,11 @@ Tasko.Views.BoardsIndex = Backbone.View.extend({
     $('#content').width('auto');
     this.$el.html(this.template({ boards: this.collection }));
     return this;
+  },
+
+  remove: function() {
+    $(window).off("resize", this.resizeWindow);
+    Backbone.View.prototype.remove.apply(this, arguments);
   },
 
   createBoard: function(event) {
@@ -33,5 +39,9 @@ Tasko.Views.BoardsIndex = Backbone.View.extend({
 
       }
     });
+  },
+
+  resizeWindow: function(event) {
+    $("#content").width($(window).width() - 70);
   }
 });
