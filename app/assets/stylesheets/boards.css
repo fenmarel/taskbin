@@ -25,6 +25,7 @@ li.list_entry, li.board_entry {
   font-size: 1.1em;
   width: 23%;
   min-width: 11em;
+  max-width: 18em;
   height: 7em;
   background: #23719F;
 }

@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.ui.all
 //= require jquery.serializeJSON
+//= require pxem.jQuery
 //= require underscore
 //= require backbone
 //= require backbone-relational

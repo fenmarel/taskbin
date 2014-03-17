@@ -18,6 +18,7 @@ Tasko.Views.BoardsShow = Backbone.CompositeView.extend({
   template: JST['boards/show'],
 
   render: function() {
+    var $cnt = $('#content');
     $('body').css("background-color", "#23719F");
     this.$el.html(this.template({ board: this.model }));
     this.renderSubviews();
@@ -27,6 +28,8 @@ Tasko.Views.BoardsShow = Backbone.CompositeView.extend({
   addList: function(list) {
     var listShow = new Tasko.Views.ListsShow({ model: list });
     this.addSubview("#lists", listShow);
+    var $cnt = $('#content');
+    $cnt.width(250 + this.lists.length * 21 * (parseInt($cnt.css('font-size')) + 1));
     listShow.render();
   },
 
