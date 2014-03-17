@@ -14,6 +14,10 @@
 
 @import 'bootstrap';
 
+* {
+  font-family: helvetica, sans-serif;
+}
+
 body {
   margin: 0;
   margin-top: 3em;
@@ -27,6 +31,11 @@ ol {
   min-height: 10px;
 }
 
+h5 {
+  font-size: 1.15em;
+  margin: 4px 3px 4px 3px;
+}
+
 #content {
   float: left;
 }
@@ -36,9 +45,13 @@ ol {
   border: none;
 }
 
+.container-fluid {
+  padding-left: 0;
+}
+
 nav .container-fluid {
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 #brand {
