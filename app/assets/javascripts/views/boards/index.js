@@ -12,7 +12,7 @@ Tasko.Views.BoardsIndex = Backbone.View.extend({
 
   render: function() {
     $('body').css("background-color", "#FFFFFF");
-    $('#content').width('auto');
+    $("#content").width($(window).width() - 70);
     this.$el.html(this.template({ boards: this.collection }));
     return this;
   },
