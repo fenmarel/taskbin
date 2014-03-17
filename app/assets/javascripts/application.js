@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
+//= require jquery.ui.sortable
 //= require jquery.serializeJSON
 //= require pxem.jQuery
 //= require underscore

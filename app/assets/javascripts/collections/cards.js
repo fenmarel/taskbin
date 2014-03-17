@@ -4,6 +4,9 @@ Tasko.Collections.Cards = Backbone.Collection.extend({
   },
 
   url: '/cards',
-  model: Tasko.Models.Card
+
+  model: Tasko.Models.Card,
+
+  comparator: "rank"
 
 });

@@ -14,12 +14,16 @@
 
 @import 'bootstrap';
 
-
 body {
   margin: 0;
   margin-top: 3em;
   box-sizing: border-box;
   padding: 8px;
+}
+
+ol {
+  list-style: none;
+  padding-left: 0;
 }
 
 #content {

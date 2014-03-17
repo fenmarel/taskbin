@@ -1,16 +1,20 @@
 <div class="list-object">
   <h4><%= list.escape('title') %></h4>
-  <% cards.forEach(function(card) { %>
-    <div class="tasko-card">
-      <button class="btn btn-tasko-card card-show-modal"
-              data-id="<%= card.id %>" data-toggle="modal" data-target="#cardModal">
-        <div><%= card.escape('title') %></div>
-        <div class="card-progress">
-          <span class="glyphicon glyphicon-th-list"></span> Progress
-        </div>
-      </button>
-    </div>
-  <% }); %>
+  <ol class="tasko-card-list">
+    <% cards.forEach(function(card) { %>
+      <li class="tasko-card"
+          data-id="<%= card.id %>" data-rank="<%= card.get('rank') %>">
+        <button class="btn btn-tasko-card card-show-modal"
+                data-id="<%= card.id %>" data-toggle="modal"
+                data-target="#cardModal">
+          <%= card.escape('title') %>
+          <div class="card-progress">
+            <span class="glyphicon glyphicon-th-list"></span> Progress
+          </div>
+        </button>
+      </li>
+    <% }); %>
+  </ol>
 
   <div>
     <a href="#" class="add-card-toggle">Add a card...</a>

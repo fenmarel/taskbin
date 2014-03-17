@@ -28,6 +28,14 @@ Tasko.Views.ListsShow = Backbone.View.extend({
     });
 
     this.$el.html(content);
+
+    $('.list-object .tasko-card-list').sortable({
+      handle: 'button',
+      connectWith: '.list-object',
+      cancel: '',
+      stop: this.reorderCards.bind(this)
+    }).disableSelection();
+
     return this;
   },
 
@@ -77,6 +85,27 @@ Tasko.Views.ListsShow = Backbone.View.extend({
     this._currentModal = view;
 
     $('#modal').html(view.render().$el);
+  },
+
+  reorderCards: function(event, ui) {
+    var $uiItem = $(ui.item);
+
+    var id = $uiItem.data('id');
+    var card = this.cards.get(id);
+
+    var nextRank = $uiItem.next() && $uiItem.next().data('rank');
+    var prevRank = $uiItem.prev() && $uiItem.prev().data('rank');
+
+    var newRank = card.get('rank');
+    if (nextRank && prevRank) {
+      newRank = (nextRank + prevRank) / 2;
+    } else if (nextRank) {
+      newRank = nextRank - 10;
+    } else if (prevRank) {
+      newRank = prevRank + 10;
+    }
+
+    card.save({ rank: newRank });
   }
 });
 
