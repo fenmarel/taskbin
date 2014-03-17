@@ -97,12 +97,13 @@ Tasko.Views.ListsShow = Backbone.View.extend({
     var prevRank = $uiItem.prev() && $uiItem.prev().data('rank');
 
     var newRank = card.get('rank');
-    if (nextRank && prevRank) {
-      newRank = (nextRank + prevRank) / 2;
-    } else if (nextRank) {
-      newRank = nextRank - 10;
-    } else if (prevRank) {
-      newRank = prevRank + 10;
+    if (nextRank !== undefined && prevRank !== undefined) {
+      console.log("first")
+      newRank = (nextRank + prevRank) / 2.0;
+    } else if (nextRank !== undefined) {
+      newRank = nextRank - 10.0;
+    } else if (prevRank !== undefined) {
+      newRank = prevRank + 10.0;
     }
 
     card.save({ rank: newRank });
