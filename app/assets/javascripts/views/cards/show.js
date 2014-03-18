@@ -33,7 +33,7 @@ Tasko.Views.CardsShow = Backbone.View.extend({
     $('.card-description').hide();
 
     var form = JST['cards/_description_edit']({ card: this.model });
-    $target.parent().append(form);
+    $target.parent().prepend(form);
   },
 
   untoggleDescriptionForm: function() {
