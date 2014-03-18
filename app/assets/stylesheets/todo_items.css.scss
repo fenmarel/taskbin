@@ -1,3 +1,27 @@
 // Place all the styles related to the TodoItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.todo-items {
+  margin-top: 0.7em;
+}
+
+#add-item-toggle {
+  color: #A9A9A9;
+  font-size: 0.9em;
+  margin-top: 1em;
+
+  &:hover {
+    color: #686868;
+  }
+}
+
+.todo-item-text {
+  margin: 7px 0 7px 0;
+}
+
+.new-item-submit {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}

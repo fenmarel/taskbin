@@ -1,0 +1,11 @@
+<form class="new-item-form">
+  <input type="text" name="todo_item[title]"
+         class="form-control todo-item-text" autofocus>
+
+  <input type="hidden" name="todo_item[card_id]" value="<%= card.id %>">
+
+  <p>
+    <input type="submit" value="Add" class="btn btn-success new-item-submit">
+    <a href="#" class="glyphicon glyphicon-remove new-item-untoggle"></a>
+  </p>
+</form>

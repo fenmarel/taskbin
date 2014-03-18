@@ -13,12 +13,14 @@
           <span class="glyphicon glyphicon-pencil"></span> Edit the description...
         </a>
         <div class="card-description"><%= card.escape('description') %></div>
-      </div>
-      <div class="modal-todos">
-        <h5 class="modal-item">
-          <span class="glyphicon glyphicon-list"></span> Items
-        </h5>
-
+        <hr>
+        <div class="modal-todos">
+          <h5 class="modal-item">
+            <span class="glyphicon glyphicon-list"></span> Items
+          </h5>
+          <div class="todo-items">
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

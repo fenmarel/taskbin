@@ -1,0 +1,10 @@
+<% todoItems.each(function(todo) { %>
+  <input type="checkbox" class="todo" data-id="<%= todo.id %>"
+         <%= todo.get('done') && "checked" %>>
+    <%= todo.escape('title') %>
+  </input><br>
+<% }); %>
+
+<a href="#" id="add-item-toggle"> Add an item...</a>
+
+<div id="item-form-container"></div>

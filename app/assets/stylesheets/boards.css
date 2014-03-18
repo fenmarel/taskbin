@@ -32,6 +32,9 @@ li.list_entry, li.board_entry {
 
 #board-title {
   color: #fff;
+  margin: 8px 8px 8px 0;
+  font-weight: bold;
+  font-size: 1.3em;
 }
 
 button.newBoard {
