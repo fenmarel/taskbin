@@ -1,4 +1,4 @@
-Tasko.Collections.Boards = Backbone.Collection.extend({
+TaskBin.Collections.Boards = Backbone.Collection.extend({
   url: '/boards',
-  model: Tasko.Models.Board
+  model: TaskBin.Models.Board
 });

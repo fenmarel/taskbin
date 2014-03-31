@@ -1,8 +1,8 @@
-Tasko.Models.Card = Backbone.Model.extend({
+TaskBin.Models.Card = Backbone.Model.extend({
   urlRoot: '/cards/',
 
   todoItems: function() {
-    this._todoItems || (this._todoItems = new Tasko.Collections.TodoItems({ card: this }));
+    this._todoItems || (this._todoItems = new TaskBin.Collections.TodoItems({ card: this }));
     this._todoItems.fetch();
     return this._todoItems;
   }

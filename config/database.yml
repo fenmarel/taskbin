@@ -1,7 +1,7 @@
 
 development:
   adapter: postgresql
-  database: tasko_development
+  database: taskbin_development
   host: localhost
   username: postgres
   pool: 5

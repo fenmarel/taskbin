@@ -1,4 +1,4 @@
-Tasko.Views.CardsShow = Backbone.View.extend({
+TaskBin.Views.CardsShow = Backbone.View.extend({
   initialize: function() {
     this.todoItems = this.model.todoItems();
 

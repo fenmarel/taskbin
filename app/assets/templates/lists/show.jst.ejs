@@ -1,11 +1,11 @@
 
 <h5><%= list.escape('title') %></h5>
-<ol class="tasko-card-list" data-list_id="<%= list.id %>"
+<ol class="taskbin-card-list" data-list_id="<%= list.id %>"
                             data-list_rank="<%= list.get('rank') %>">
   <% cards.forEach(function(card) { %>
-    <li class="tasko-card"
+    <li class="taskbin-card"
         data-id="<%= card.id %>" data-rank="<%= card.get('rank') %>">
-      <button class="btn btn-tasko-card card-show-modal"
+      <button class="btn btn-taskbin-card card-show-modal"
               data-id="<%= card.id %>" data-toggle="modal"
               data-target="#cardModal">
         <%= card.escape('title') %>

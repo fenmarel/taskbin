@@ -1,4 +1,4 @@
-Tasko.Views.ListsNew = Backbone.CompositeView.extend({
+TaskBin.Views.ListsNew = Backbone.CompositeView.extend({
   initialize: function(options) {
     this.board = options.board;
     this.vent = options.vent;

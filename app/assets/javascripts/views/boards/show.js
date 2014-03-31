@@ -1,4 +1,4 @@
-Tasko.Views.BoardsShow = Backbone.CompositeView.extend({
+TaskBin.Views.BoardsShow = Backbone.CompositeView.extend({
   initialize: function(options) {
     this.lists = this.model.lists();
     _.bindAll(this, "addList");
@@ -32,7 +32,7 @@ Tasko.Views.BoardsShow = Backbone.CompositeView.extend({
   },
 
   addList: function(list) {
-    var listShow = new Tasko.Views.ListsShow({ model: list });
+    var listShow = new TaskBin.Views.ListsShow({ model: list });
     this.addSubview("#lists", listShow);
     var $cnt = $('#content');
     $cnt.width(250 + this.lists.length * 21 * (parseInt($cnt.css('font-size')) + 1));
@@ -40,7 +40,7 @@ Tasko.Views.BoardsShow = Backbone.CompositeView.extend({
   },
 
   addListForm: function(vent) {
-    var listNew = new Tasko.Views.ListsNew({
+    var listNew = new TaskBin.Views.ListsNew({
       collection: this.lists,
       board: this.model,
       vent: vent

@@ -1,4 +1,4 @@
-Tasko::Application.routes.draw do
+TaskBin::Application.routes.draw do
   root to: 'boards#index'
   resources :boards, :except => [:new, :edit] do
     resources :lists, :shallow => true, :except => [:new, :edit]

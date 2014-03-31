@@ -1,13 +1,13 @@
-window.Tasko = {
+window.TaskBin = {
   Models: {},
   Collections: {},
   Views: {},
   Routers: {},
   initialize: function() {
-    Tasko.boards = new Tasko.Collections.Boards();
-    Tasko.boards.fetch({
+    TaskBin.boards = new TaskBin.Collections.Boards();
+    TaskBin.boards.fetch({
       success: function() {
-        new Tasko.Routers.TaskoRouter();
+        new TaskBin.Routers.TaskBinRouter();
         Backbone.history.start();
       }
     });
@@ -15,7 +15,7 @@ window.Tasko = {
 };
 
 $(document).ready(function(){
-  Tasko.initialize();
+  TaskBin.initialize();
 });
 
 

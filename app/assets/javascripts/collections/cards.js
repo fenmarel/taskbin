@@ -1,11 +1,11 @@
-Tasko.Collections.Cards = Backbone.Collection.extend({
+TaskBin.Collections.Cards = Backbone.Collection.extend({
   initialize: function(options) {
     this.list = options.list;
   },
 
   url: '/cards',
 
-  model: Tasko.Models.Card,
+  model: TaskBin.Models.Card,
 
   comparator: "rank"
 

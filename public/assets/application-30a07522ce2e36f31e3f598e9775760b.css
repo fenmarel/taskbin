@@ -7607,7 +7607,7 @@ button.close {
     display: none !important;
   }
 }
-/* line 18, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 18, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 body {
   margin: 0;
   box-sizing: border-box;
@@ -7615,7 +7615,7 @@ body {
   background-color: #daf1fb !important;
 }
 
-/* line 25, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 25, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 span.title {
   font-weight: 700;
   font-size: 28px;
@@ -7624,12 +7624,12 @@ span.title {
   font-style: italic;
 }
 
-/* line 33, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 33, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 input#logout, input#logout {
   background-color: white;
 }
 
-/* line 37, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 37, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 div#content {
   margin: 0px auto;
   width: auto;
@@ -7638,7 +7638,7 @@ div#content {
   overflow-x: scroll;
 }
 
-/* line 47, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 47, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 .white_area {
   overflow: scroll;
   background-color: white;
@@ -7648,51 +7648,51 @@ div#content {
   padding: 30px;
 }
 
-/* line 56, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 56, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 div.board_members {
   margin-left: 22px;
 }
 
-/* line 60, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 60, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 button.newList {
   margin: 10px 0;
 }
 
-/* line 64, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 64, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 button#deleteBoard {
   margin: 10px 22px;
 }
 
-/* line 68, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 68, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 a {
   text-decoration: none !important;
   font-weight: 600;
 }
 
-/* line 73, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 73, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 ul {
   list-style-type: none !important;
   padding-left: 0;
   margin: 0;
 }
 
-/* line 80, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 80, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 li {
   padding-top: 2px;
   padding-left: 0;
 }
 
-/* line 86, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 86, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 .hidden {
   display: none;
 }
 
-/* line 90, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 90, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 input[type="text"] {
   width: inherit;
 }
 
-/* line 94, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 94, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 button, input[type="submit"] {
   font-weight: 800;
   background: transparent;
@@ -7700,7 +7700,7 @@ button, input[type="submit"] {
   border-radius: 8px;
 }
 
-/* line 101, /Users/Jonny_P/Programming/tasko/app/assets/stylesheets/application.css.scss */
+/* line 101, /Users/Jonny_P/Programming/taskbin/app/assets/stylesheets/application.css.scss */
 button:hover, input[type="submit"]:hover {
   background-color: transparent;
   color: blue;

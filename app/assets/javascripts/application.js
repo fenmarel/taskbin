@@ -18,7 +18,7 @@
 //= require underscore
 //= require backbone
 //= require backbone-relational
-//= require tasko
+//= require taskbin
 //= require underscore
 //= require backbone
 //= require bootstrap

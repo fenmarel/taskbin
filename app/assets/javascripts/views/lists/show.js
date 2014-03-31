@@ -1,4 +1,4 @@
-Tasko.Views.ListsShow = Backbone.View.extend({
+TaskBin.Views.ListsShow = Backbone.View.extend({
   initialize: function(options) {
     this.cards = this.model.cards();
 
@@ -31,9 +31,9 @@ Tasko.Views.ListsShow = Backbone.View.extend({
 
     this.$el.html(content);
 
-    $('.list-object .tasko-card-list').sortable({
+    $('.list-object .taskbin-card-list').sortable({
       handle: 'button',
-      connectWith: ['.tasko-card-list'],
+      connectWith: ['.taskbin-card-list'],
       cancel: '',
       dropOnEmpty: true,
       stop: this.reorderCards.bind(this)
@@ -82,7 +82,7 @@ Tasko.Views.ListsShow = Backbone.View.extend({
   showModal: function(event) {
     event.preventDefault();
     var card = this.cards.get($(event.currentTarget).data().id);
-    var view = new Tasko.Views.CardsShow({ model: card })
+    var view = new TaskBin.Views.CardsShow({ model: card })
 
     this._currentModal && this._currentModal.remove();
     this._currentModal = view;

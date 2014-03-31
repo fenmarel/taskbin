@@ -1,4 +1,4 @@
-Tasko.Collections.Lists = Backbone.Collection.extend({
+TaskBin.Collections.Lists = Backbone.Collection.extend({
   initialize: function(options) {
     this.board = options.board;
   },
@@ -7,7 +7,7 @@ Tasko.Collections.Lists = Backbone.Collection.extend({
     return this.board.url() + '/lists'
   },
 
-  model: Tasko.Models.List,
+  model: TaskBin.Models.List,
 
   comparator: "rank"
 });

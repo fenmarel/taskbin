@@ -31273,7 +31273,7 @@ $.widget( "ui.tooltip", {
 		return child;
 	};
 })();
-window.Tasko = {
+window.TaskBin = {
   Models: {},
   Collections: {},
   Views: {},
@@ -31284,7 +31284,7 @@ window.Tasko = {
 };
 
 $(document).ready(function(){
-  Tasko.initialize();
+  TaskBin.initialize();
 });
 /* ========================================================================
  * Bootstrap: affix.js v3.1.1

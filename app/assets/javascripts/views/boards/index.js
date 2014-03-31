@@ -1,4 +1,4 @@
-Tasko.Views.BoardsIndex = Backbone.View.extend({
+TaskBin.Views.BoardsIndex = Backbone.View.extend({
   initialize: function() {
     this.listenTo(this.collection, "add", this.render);
     $(window).on('resize', this.resizeWindow);

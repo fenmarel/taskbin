@@ -1,4 +1,4 @@
-## Tasko
+## TaskBin
 
 [Trello](https://trello.com) clone.
 

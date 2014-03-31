@@ -1,4 +1,4 @@
-Tasko.Routers.TaskoRouter = Backbone.Router.extend({
+TaskBin.Routers.TaskBinRouter = Backbone.Router.extend({
   routes: {
     "": "boardIndex",
     "boards/:id": "boardShow",
@@ -6,22 +6,22 @@ Tasko.Routers.TaskoRouter = Backbone.Router.extend({
   },
 
   boardIndex: function() {
-    this._swapView(new Tasko.Views.BoardsIndex({
-      collection: Tasko.boards
+    this._swapView(new TaskBin.Views.BoardsIndex({
+      collection: TaskBin.boards
     }));
   },
 
   boardShow: function(id) {
     var vent = _.extend({}, Backbone.Events);
 
-    this._swapView(new Tasko.Views.BoardsShow({
-      model: Tasko.boards.get(id),
+    this._swapView(new TaskBin.Views.BoardsShow({
+      model: TaskBin.boards.get(id),
       vent: vent
     }))
   },
 
   cardShow: function(id) {
-    var showView = new Tasko.Views.CardsShow();
+    var showView = new TaskBin.Views.CardsShow();
     $('#content').html(showView.render().$el);
   },
 

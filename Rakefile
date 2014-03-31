@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Tasko::Application.load_tasks
+TaskBin::Application.load_tasks
