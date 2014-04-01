@@ -1,9 +1,9 @@
 ## TaskBin
 
 [Trello](https://trello.com) clone.
+Tried to stay true to the styling.
 
-Tried to stay true to the styling.  I was handed some of the Rails side as a
-skeleton project, but altered _a lot_ of it before starting.
+Check me out [here](http://taskbin.herokuapp.com)
 
 Implemented using:
 * Rails 4 backend
