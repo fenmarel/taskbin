@@ -57,10 +57,19 @@ nav .container-fluid {
 
 #brand {
   color: #91B4C9;
+}
+
+#brand-in {
+  @extend #brand;
+  color: #91B4C9;
   margin-left: 15%;
 }
 
-#username {
+#nav-username {
+  color: #91B4C9;
+}
+
+#sign-up, #log-in {
   color: #91B4C9;
 }
 
