@@ -184,10 +184,6 @@ li {
   display: none;
 }
 
-input[type="text"] {
-  width: inherit;
-}
-
 .list-object {
   @extend .btn;
   @extend .btn-default;
@@ -195,4 +191,10 @@ input[type="text"] {
   &:hover {
     background-color: #DBDBDB;
   }
+}
+
+.jumbotron {
+  border-radius: 4px;
+  margin-top: 1em;
+  padding: 30px;
 }
