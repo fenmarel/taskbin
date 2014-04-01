@@ -3,7 +3,7 @@
 [Trello](https://trello.com) clone.
 Tried to stay true to the styling.
 
-Check me out [here](http://taskbin.herokuapp.com)
+###Check me out [here](http://taskbin.herokuapp.com)!
 
 Implemented using:
 * Rails 4 backend
