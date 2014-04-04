@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
     if @user.save
       login!(@user)
+      @user.populate_guest if !!(@user.username =~ /Guest\d/)
       # flash[:success] = ["Welcome to TaskBin, #{@user.username}!"]
       redirect_to root_url
     else

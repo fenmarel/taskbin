@@ -1,11 +1,16 @@
 <div class="row text-center">
   <div class="jumbotron col-xs-4 col-xs-offset-4">
     <h1>Log In
-      <form action="<%= session_url %>" method="POST" accept-charset="utf-8">
+      <form action="<%= users_url %>" method="POST" accept-charset="utf-8">
         <input type="hidden" name="authenticity_token"
                value="<%= form_authenticity_token %>" id="authenticity_token">
 
-        <input type="hidden" name="user[username]" value="Guest">
+        <input type="hidden" name="user[username]"
+               value="Guest<%= User.count + 1 %>">
+        <input type="hidden" name="user[password]" value="password">
+
+        <input type="hidden" name="user[email]"
+               value="Guest<%= User.count + 1 %>@hireme.com">
         <input type="hidden" name="user[password]" value="password">
 
         <input type="submit" value="Demo Account" class="btn btn-primary btn-lg">
