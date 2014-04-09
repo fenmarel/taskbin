@@ -140,3 +140,13 @@ li.dragged {
   transform: rotate(30deg);
   -webkit-transform: rotate(3deg);
 }
+
+.delete-card {
+  display: none;
+  color: #A9A9A9;
+  font-size: 0.9em;
+
+  &:hover {
+    color: #686868;
+  }
+}

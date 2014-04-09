@@ -10,6 +10,11 @@ class CardsController < ApplicationController
     end
   end
 
+  def destroy
+    @card = Card.find(params[:id])
+    @card.destroy
+  end
+
   def index
     @cards = Card.all
 

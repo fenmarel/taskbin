@@ -2,7 +2,7 @@ TaskBin.Views.ListsShow = Backbone.View.extend({
   initialize: function(options) {
     this.cards = this.model.cards();
 
-    this.listenTo(this.cards, "add", this.render);
+    this.listenTo(this.cards, "add remove", this.render);
 
     var that = this;
     this.cards.fetch({
@@ -20,7 +20,10 @@ TaskBin.Views.ListsShow = Backbone.View.extend({
     "click .add-card-toggle": "toggleCardForm",
     "click .new-card-untoggle": "untoggleCardForm",
     "submit .new-card-form": "createCard",
-    "click .card-show-modal": "showModal"
+    "click .card-show-modal": "showModal",
+    "mouseenter .btn-taskbin-card": "showOptions",
+    "mouseleave .btn-taskbin-card": "hideOptions",
+    "click .delete-card": "deleteCard"
   },
 
   render: function() {
@@ -81,6 +84,7 @@ TaskBin.Views.ListsShow = Backbone.View.extend({
 
   showModal: function(event) {
     event.preventDefault();
+    if ($(event.target).hasClass('delete-card')) { return; }
     var card = this.cards.get($(event.currentTarget).data().id);
     var view = new TaskBin.Views.CardsShow({ model: card })
 
@@ -115,6 +119,27 @@ TaskBin.Views.ListsShow = Backbone.View.extend({
     } else {
       card.save({ rank: newRank }, { patch: true });
     }
+  },
+
+  showOptions: function(event) {
+    $(event.currentTarget).find('.delete-card').show();
+  },
+
+  hideOptions: function(event) {
+    $(event.currentTarget).find('.delete-card').hide();
+  },
+
+  deleteCard: function(event) {
+    event.preventDefault();
+    var id = $(event.currentTarget).parent().data().id;
+    var card = new TaskBin.Models.Card({ id: id });
+    var that = this;
+
+    card.destroy({
+      success: function() {
+        that.cards.remove(card);
+      }
+    });
   }
 });
 
