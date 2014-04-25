@@ -23,8 +23,10 @@ TaskBin.Views.BoardsShow = Backbone.CompositeView.extend({
     this.$el.html(this.template({ board: this.model }));
     this.renderSubviews();
 
-    $('#lists').sortable({
+    $('.lists').sortable({
       tolerance: 'pointer',
+      connectWith: ['.lists'],
+      cancel: '',
       stop: this.reorderLists.bind(this)
     })
 
@@ -33,7 +35,7 @@ TaskBin.Views.BoardsShow = Backbone.CompositeView.extend({
 
   addList: function(list) {
     var listShow = new TaskBin.Views.ListsShow({ model: list });
-    this.addSubview("#lists", listShow);
+    this.addSubview(".lists", listShow);
     var $cnt = $('#content');
     $cnt.width(250 + this.lists.length * 21 * (parseInt($cnt.css('font-size')) + 1));
     listShow.render();
