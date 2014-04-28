@@ -16,7 +16,7 @@ class CardsController < ApplicationController
   end
 
   def index
-    @cards = Card.all
+    @cards = self.current_user.cards
 
     render :json => @cards
   end
