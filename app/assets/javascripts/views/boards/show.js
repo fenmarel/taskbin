@@ -4,7 +4,7 @@ TaskBin.Views.BoardsShow = Backbone.CompositeView.extend({
     _.bindAll(this, "addList");
     options.vent.bind("addList", this.addList);
 
-    this.listenTo(this.lists, "add", this.render);
+    this.listenTo(this.lists, "add remove", this.render);
 
     var that = this;
     this.lists.fetch({
